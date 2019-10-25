@@ -11,7 +11,9 @@ import { timingSafeEqual } from 'crypto';
 export class ProductDescriptionComponent implements OnInit {
 
   constructor(private _productService: ProductService) { }
-   albumInfo;
+  
+  albumInfo;
+
   ngOnInit() {
     this._productService.getAlbum(1).subscribe(response => this.albumInfo=response);
 
