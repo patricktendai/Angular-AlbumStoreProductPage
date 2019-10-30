@@ -15,7 +15,7 @@ import { Product } from './product'
 export class ProductService {
 
   private _albumUrl = '../assets/album.json';
-  private _productUrl = '../assets/products.json';
+  private _productsUrl = '../assets/products.json';
 
   constructor(private _http: Http) { }
 
@@ -25,7 +25,7 @@ export class ProductService {
   }
 
   getProducts() {
-    return this._http.get(this._productUrl).map(response =>
+    return this._http.get(this._productsUrl).map(response =>
      <Product[]>response.json());
   }
 
